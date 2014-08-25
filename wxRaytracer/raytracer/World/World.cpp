@@ -26,8 +26,8 @@
 // build functions
 
 #include "BuildSingleSphere.cpp"
-//#include "BuildMultipleObjects.cpp"
-//#include "BuildBBCoverPic.cpp"
+#include "BuildMultipleObjects.cpp"
+#include "BuildBBCoverPic.cpp"
 
 
 // -------------------------------------------------------------------- default constructor
@@ -64,7 +64,7 @@ World::render_scene(void) const {
 	int 		hres 	= vp.hres;
 	int 		vres 	= vp.vres;
 	float		s		= vp.s;
-	float		zw		= 100.0;			// hardwired in
+	float		zw		= vp.zw;			// hardwired in --NOT anymore
 
 	ray.d = Vector3D(0, 0, -1);
 	

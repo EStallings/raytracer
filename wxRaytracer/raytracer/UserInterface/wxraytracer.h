@@ -43,7 +43,12 @@ public:
    void OnQuit( wxCommandEvent& event );
    void OnOpenFile( wxCommandEvent& event );
    void OnSaveFile( wxCommandEvent& event );
-   void OnRenderStart( wxCommandEvent& event );
+   void OnRenderStart1( wxCommandEvent& event );
+   void OnRenderStart2(wxCommandEvent& event);
+   void OnRenderStart3(wxCommandEvent& event);
+   void OnRenderStart4(wxCommandEvent& event);
+   void OnRenderStart5(wxCommandEvent& event);
+   void OnRenderStart6(wxCommandEvent& event);
    void OnRenderCompleted( wxCommandEvent& event );
    void OnRenderPause( wxCommandEvent& event );
    void OnRenderResume( wxCommandEvent& event );
@@ -60,7 +65,12 @@ enum
    Menu_File_Quit = 100,
    Menu_File_Open,
    Menu_File_Save,
-   Menu_Render_Start,
+   Menu_Render_Start3_1_a,
+   Menu_Render_Start3_1_b,
+   Menu_Render_Start3_1_c,
+   Menu_Render_Start3_2,
+   Menu_Render_Start3_2b,
+   Menu_Render_Start3_3,
    Menu_Render_Pause,
    Menu_Render_Resume
 };
@@ -75,7 +85,7 @@ public:
    wxImage GetImage(void);
    
    virtual void OnDraw(wxDC& dc);
-   void renderStart(void);
+   void renderStart(World::BuildFunc build);
    void renderPause(void);
    void renderResume(void);
    void OnRenderCompleted( wxCommandEvent& event );

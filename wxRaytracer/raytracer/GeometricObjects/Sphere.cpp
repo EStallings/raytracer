@@ -85,6 +85,7 @@ Sphere::hit(const Ray& ray, double& tmin, ShadeRec& sr) const {
 			tmin = t;
 			sr.normal 	 = (temp + t * ray.d) / radius;
 			sr.local_hit_point = ray.o + t * ray.d;
+			sr.color = color;
 			return (true);
 		} 
 	
@@ -94,6 +95,7 @@ Sphere::hit(const Ray& ray, double& tmin, ShadeRec& sr) const {
 			tmin = t;
 			sr.normal   = (temp + t * ray.d) / radius;
 			sr.local_hit_point = ray.o + t * ray.d;
+			sr.color = color;
 			return (true);
 		} 
 	}

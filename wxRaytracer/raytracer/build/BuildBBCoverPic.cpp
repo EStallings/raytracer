@@ -1,7 +1,7 @@
 // This builds the cover image for Chapter 3: Bare Bones Ray Tracing
 
 void 												
-World::build(void) {
+World::build2(void) {
 	vp.set_hres(400);
 	vp.set_vres(400);
 	vp.set_pixel_size(0.5);

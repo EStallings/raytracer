@@ -39,7 +39,8 @@ class World {
 			
 
 	public:
-	
+		typedef void(World::*BuildFunc)(void);
+
 		World(void);												
 		
 		~World();
@@ -48,7 +49,22 @@ class World {
 		add_object(GeometricObject* object_ptr);
 		
 		void 					
-		build(void);
+		build1(void);
+
+		void
+		build2(void);
+
+		void
+		build3(void);
+		
+		void
+		build4(void);
+		
+		void
+		build5(void);
+
+		void
+		build6(void);
 
 		void 												
 		render_scene(void) const;
