@@ -1,13 +1,14 @@
-void 												
+void
 World::build1(void) {
-   vp.set_hres(200);
+	vp.set_hres(200);
 	vp.set_vres(200);
 	vp.set_pixel_size(1.0);
 	vp.set_gamma(1.0);
-	
+	vp.set_zw(100.0);
+
 	background_color = black;
-	tracer_ptr = new SingleSphere(this); 
-	
+	tracer_ptr = new SingleSphere(this);
+
 	sphere.set_center(0.0);
 	sphere.set_radius(85);
 	sphere.set_color(red);

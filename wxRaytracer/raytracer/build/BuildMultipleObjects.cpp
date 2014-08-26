@@ -3,6 +3,7 @@ World::build3(void) {
 	vp.set_hres(200);
 	vp.set_vres(200);
 	vp.set_pixel_size(1.0);
+	vp.set_zw(100.0);
 	
 	tracer_ptr = new MultipleObjects(this); 
 	

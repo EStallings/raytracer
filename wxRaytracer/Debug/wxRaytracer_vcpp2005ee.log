@@ -1,19 +1,19 @@
-﻿Build started 8/25/2014 9:55:47 AM.
-     1>Project "E:\Users\Ezra\dev\raytracer\wxRaytracer\wxRaytracer_vcpp2005ee.vcxproj" on node 2 (Build target(s)).
+﻿Build started 8/25/2014 12:22:44 PM.
+     1>Project "C:\Users\Ezra\raytracer\wxRaytracer\wxRaytracer_vcpp2005ee.vcxproj" on node 2 (Build target(s)).
      1>ClCompile:
-         E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IwxWidgets\include /IwxWidgets\msw /Iraytracer\BRDFs /Iraytracer\BTDFs /Iraytracer\build /Iraytracer\Cameras /Iraytracer\GeometricObjects /Iraytracer\Lights /Iraytracer\Mappings /Iraytracer\Materials /Iraytracer\Noises /Iraytracer\Samplers /Iraytracer\Textures /Iraytracer\Tracers /Iraytracer\UserInterface /Iraytracer\Utilities /Iraytracer\World /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D __WIN32__ /D __WXMSW__ /D WINVER=0x0400 /D STRICT /D NDEBUG /Gm /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Debug\\" /Fd"Debug\vc70.pdb" /Gd /TP /analyze- /errorReport:prompt raytracer\World\World.cpp
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\CL.exe /c /IwxWidgets\include /IwxWidgets\msw /Iraytracer\BRDFs /Iraytracer\BTDFs /Iraytracer\build /Iraytracer\Cameras /Iraytracer\GeometricObjects /Iraytracer\Lights /Iraytracer\Mappings /Iraytracer\Materials /Iraytracer\Noises /Iraytracer\Samplers /Iraytracer\Textures /Iraytracer\Tracers /Iraytracer\UserInterface /Iraytracer\Utilities /Iraytracer\World /ZI /nologo /W3 /WX- /Od /Oy- /D WIN32 /D __WIN32__ /D __WXMSW__ /D WINVER=0x0400 /D STRICT /D NDEBUG /Gm /EHsc /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /GR /Fo"Debug\\" /Fd"Debug\vc70.pdb" /Gd /TP /analyze- /errorReport:prompt raytracer\World\World.cpp
          World.cpp
-     1>e:\users\ezra\dev\raytracer\wxraytracer\raytracer\utilities\constants.h(20): warning C4305: 'initializing' : truncation from 'double' to 'const float'
-     1>e:\users\ezra\dev\raytracer\wxraytracer\raytracer\build\buildmultipleobjects.cpp(26): warning C4305: 'argument' : truncation from 'double' to 'const float'
-     1>e:\users\ezra\dev\raytracer\wxraytracer\raytracer\build\buildmultipleobjects.cpp(56): warning C4305: 'argument' : truncation from 'double' to 'const float'
-     1>e:\users\ezra\dev\raytracer\wxraytracer\raytracer\build\buildbbcoverpic.cpp(15): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>e:\users\ezra\dev\raytracer\wxraytracer\raytracer\build\buildbbcoverpic.cpp(16): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>e:\users\ezra\dev\raytracer\wxraytracer\raytracer\build\buildbbcoverpic.cpp(18): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>e:\users\ezra\dev\raytracer\wxraytracer\raytracer\build\buildbbcoverpic.cpp(19): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>e:\users\ezra\dev\raytracer\wxraytracer\raytracer\build\buildbbcoverpic.cpp(20): warning C4305: 'argument' : truncation from 'double' to 'float'
-     1>e:\users\ezra\dev\raytracer\wxraytracer\raytracer\build\buildbbcoverpic.cpp(21): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\ezra\raytracer\wxraytracer\raytracer\utilities\constants.h(20): warning C4305: 'initializing' : truncation from 'double' to 'const float'
+     1>c:\users\ezra\raytracer\wxraytracer\raytracer\build\buildmultipleobjects.cpp(27): warning C4305: 'argument' : truncation from 'double' to 'const float'
+     1>c:\users\ezra\raytracer\wxraytracer\raytracer\build\buildmultipleobjects.cpp(57): warning C4305: 'argument' : truncation from 'double' to 'const float'
+     1>c:\users\ezra\raytracer\wxraytracer\raytracer\build\buildbbcoverpic.cpp(16): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\ezra\raytracer\wxraytracer\raytracer\build\buildbbcoverpic.cpp(17): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\ezra\raytracer\wxraytracer\raytracer\build\buildbbcoverpic.cpp(19): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\ezra\raytracer\wxraytracer\raytracer\build\buildbbcoverpic.cpp(20): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\ezra\raytracer\wxraytracer\raytracer\build\buildbbcoverpic.cpp(21): warning C4305: 'argument' : truncation from 'double' to 'float'
+     1>c:\users\ezra\raytracer\wxraytracer\raytracer\build\buildbbcoverpic.cpp(22): warning C4305: 'argument' : truncation from 'double' to 'float'
        Link:
-         E:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Debug\wxRaytracer.exe" /INCREMENTAL /NOLOGO /LIBPATH:wxWidgets\lib wxmsw28_core.lib wxbase28.lib wxtiff.lib wxjpeg.lib wxpng.lib wxzlib.lib winmm.lib comctl32.lib rpcrt4.lib wsock32.lib oleacc.lib odbc32.lib kernel32.lib user32.lib gdi32.lib ole32.lib oleaut32.lib comdlg32.lib uuid.lib advapi32.lib shell32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:MSVCRT.lib /NODEFAULTLIB:LIBCD.lib /NODEFAULTLIB:LIBCMTD.lib /NODEFAULTLIB:LIBC.lib /NODEFAULTLIB:LIBCMT.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"Debug\wxRaytracer.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Debug\wxRaytracer.lib" /MACHINE:X86 /SAFESEH:NO Debug\GeometricObject.obj
+         C:\Program Files (x86)\Microsoft Visual Studio 12.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"Debug\wxRaytracer.exe" /INCREMENTAL /NOLOGO /LIBPATH:wxWidgets\lib wxmsw28_core.lib wxbase28.lib wxtiff.lib wxjpeg.lib wxpng.lib wxzlib.lib winmm.lib comctl32.lib rpcrt4.lib wsock32.lib oleacc.lib odbc32.lib kernel32.lib user32.lib gdi32.lib ole32.lib oleaut32.lib comdlg32.lib uuid.lib advapi32.lib shell32.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /NODEFAULTLIB:MSVCRT.lib /NODEFAULTLIB:LIBCD.lib /NODEFAULTLIB:LIBCMTD.lib /NODEFAULTLIB:LIBC.lib /NODEFAULTLIB:LIBCMT.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"Debug\wxRaytracer.pdb" /SUBSYSTEM:WINDOWS /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"Debug\wxRaytracer.lib" /MACHINE:X86 /SAFESEH:NO Debug\GeometricObject.obj
          Debug\Plane.obj
          Debug\Sphere.obj
          Debug\MultipleObjects.obj
@@ -29,9 +29,9 @@
          Debug\Vector3D.obj
          Debug\ViewPlane.obj
          Debug\World.obj
-         wxRaytracer_vcpp2005ee.vcxproj -> E:\Users\Ezra\dev\raytracer\wxRaytracer\Debug\wxRaytracer.exe
-     1>Done Building Project "E:\Users\Ezra\dev\raytracer\wxRaytracer\wxRaytracer_vcpp2005ee.vcxproj" (Build target(s)).
+         wxRaytracer_vcpp2005ee.vcxproj -> C:\Users\Ezra\raytracer\wxRaytracer\Debug\wxRaytracer.exe
+     1>Done Building Project "C:\Users\Ezra\raytracer\wxRaytracer\wxRaytracer_vcpp2005ee.vcxproj" (Build target(s)).
 
 Build succeeded.
 
-Time Elapsed 00:00:01.82
+Time Elapsed 00:00:02.27
