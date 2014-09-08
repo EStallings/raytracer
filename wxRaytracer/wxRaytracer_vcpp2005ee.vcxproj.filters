@@ -93,6 +93,7 @@
     <ClCompile Include="raytracer\Tracers\Tracer.cpp">
       <Filter>Tracers</Filter>
     </ClCompile>
+    <ClCompile Include="raytracer\Tracers\ImpliticSurface.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="raytracer\GeometricObjects\GeometricObject.h">
@@ -149,5 +150,6 @@
     <ClInclude Include="raytracer\Tracers\Tracer.h">
       <Filter>Tracers</Filter>
     </ClInclude>
+    <ClInclude Include="raytracer\Tracers\ImpliticSurface.h" />
   </ItemGroup>
 </Project>

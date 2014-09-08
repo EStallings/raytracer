@@ -49,6 +49,7 @@ public:
    void OnRenderStart4(wxCommandEvent& event);
    void OnRenderStart5(wxCommandEvent& event);
    void OnRenderStart6(wxCommandEvent& event);
+   void OnRenderStart7(wxCommandEvent& event);
    void OnRenderCompleted( wxCommandEvent& event );
    void OnRenderPause( wxCommandEvent& event );
    void OnRenderResume( wxCommandEvent& event );
@@ -71,6 +72,7 @@ enum
    Menu_Render_Start3_2,
    Menu_Render_Start3_2b,
    Menu_Render_Start3_3,
+   Menu_Render_Start4_a,
    Menu_Render_Pause,
    Menu_Render_Resume
 };

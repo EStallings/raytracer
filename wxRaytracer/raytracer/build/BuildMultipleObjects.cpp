@@ -57,3 +57,4 @@ World::build5(void) {
 	plane_ptr->set_color(0.0, 0.3, 0.0);	// dark green
 	add_object(plane_ptr);
 }
+

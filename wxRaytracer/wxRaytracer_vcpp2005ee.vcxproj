@@ -127,6 +127,7 @@
     <ClCompile Include="raytracer\GeometricObjects\GeometricObject.cpp" />
     <ClCompile Include="raytracer\GeometricObjects\Plane.cpp" />
     <ClCompile Include="raytracer\GeometricObjects\Sphere.cpp" />
+    <ClCompile Include="raytracer\Tracers\ImpliticSurface.cpp" />
     <ClCompile Include="raytracer\Tracers\MultipleObjects.cpp" />
     <ClCompile Include="raytracer\Tracers\SingleSphere.cpp" />
     <ClCompile Include="raytracer\Tracers\Tracer.cpp" />
@@ -145,6 +146,7 @@
     <ClInclude Include="raytracer\GeometricObjects\GeometricObject.h" />
     <ClInclude Include="raytracer\GeometricObjects\Plane.h" />
     <ClInclude Include="raytracer\GeometricObjects\Sphere.h" />
+    <ClInclude Include="raytracer\Tracers\ImpliticSurface.h" />
     <ClInclude Include="raytracer\Tracers\MultipleObjects.h" />
     <ClInclude Include="raytracer\Tracers\SingleSphere.h" />
     <ClInclude Include="raytracer\Tracers\Tracer.h" />

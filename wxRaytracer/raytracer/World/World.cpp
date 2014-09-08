@@ -1,6 +1,9 @@
 // this file contains the definition of the World class
 
+
 #include "wxraytracer.h"
+#include <windows.h>
+
 
 #include "World.h"
 #include "Constants.h"
@@ -14,6 +17,7 @@
 
 #include "SingleSphere.h"
 #include "MultipleObjects.h"
+#include "ImpliticSurface.h"
 
 // utilities
 
@@ -28,7 +32,7 @@
 #include "BuildSingleSphere.cpp"
 #include "BuildMultipleObjects.cpp"
 #include "BuildBBCoverPic.cpp"
-
+#include "BuildImplicitSurface.cpp"
 
 // -------------------------------------------------------------------- default constructor
 
@@ -56,6 +60,8 @@ World::~World(void) {
 
 // This uses orthographic viewing along the zw axis
 
+//NO ANTIALIASING VERSION
+/*
 void 												
 World::render_scene(void) const {
 
@@ -75,8 +81,108 @@ World::render_scene(void) const {
 			display_pixel(r, c, pixel_color);
 		}	
 }  
+*/
+
+//AVERAGED ANTIALIASING
 
 
+void
+World::render_scene(void) const {
+	RGBColor pixel_color;
+	Ray ray;
+	float zw = 100.0;
+	int n = (int)sqrt((float)vp.num_samples);
+	float x, y;
+
+	//open_window(vp.hres, vp.vres);
+	ray.d = Vector3D(0, 0, -1);
+
+	for (int r = 0; r < vp.vres; r++)
+		for (int c = 0; c <= vp.hres; c++)
+		{
+			pixel_color = black;
+			for (int p = 0; p < n; p++)
+				for (int q = 0; q < n; q++)
+				{
+					x = vp.s * (c - 0.5 * vp.hres + (q + 0.5) / n);
+					y = vp.s * (r - 0.5 * vp.vres + (p + 0.5) / n);
+					ray.o = Point3D(x, y, zw);
+					RGBColor ret = tracer_ptr->trace_ray(ray);
+					pixel_color += ret;
+				}
+			pixel_color /= vp.num_samples;
+			display_pixel(r, c, pixel_color);
+		}	
+}
+
+
+//RANDOM ANTIALIASING
+/*
+void
+World::render_scene(void) const {
+	RGBColor pixel_color;
+	Ray ray;
+	float zw = 100.0;
+	float x, y;
+
+	//open_window(vp.hres, vp.vres);
+	ray.d = Vector3D(0, 0, -1);
+
+	for (int r = 0; r < vp.vres; r++)
+		for (int c = 0; c <= vp.hres; c++)
+		{
+		pixel_color = black;
+		for (int p = 0; p < vp.num_samples; p++)
+			{
+			x = vp.s * (c - 0.5 * vp.hres + rand_float());
+			y = vp.s * (r - 0.5 * vp.vres + rand_float());
+			ray.o = Point3D(x, y, zw);
+			pixel_color += tracer_ptr->trace_ray(ray);
+			}
+		pixel_color /= vp.num_samples;
+		display_pixel(r, c, pixel_color);
+		}
+} */
+
+// Mix
+
+/*
+void
+World::render_scene(void) const {
+	RGBColor pixel_color;
+	Ray ray;
+	float zw = 100.0;
+	float x, y;
+
+	int n = (int)sqrt((float)vp.num_samples);
+
+	//open_window(vp.hres, vp.vres);
+	ray.d = Vector3D(0, 0, -1);
+
+	for (int r = 0; r < vp.vres; r++)
+	for (int c = 0; c <= vp.hres; c++)
+	{
+		pixel_color = black;
+		for (int p = 0; p < n; p++)
+		{
+			x = vp.s * (c - 0.5 * vp.hres + rand_float());
+			y = vp.s * (r - 0.5 * vp.vres + rand_float());
+			ray.o = Point3D(x, y, zw);
+			pixel_color += tracer_ptr->trace_ray(ray);
+		}
+		for (int p = 0; p < n; p++)
+			for (int q = 0; q < n; q++)
+			{
+			x = vp.s * (c - 0.5 * vp.hres + (q + 0.5) / n);
+			y = vp.s * (r - 0.5 * vp.vres + (p + 0.5) / n);
+			ray.o = Point3D(x, y, zw);
+			RGBColor ret = tracer_ptr->trace_ray(ray);
+			pixel_color += ret;
+			}
+		pixel_color /= (vp.num_samples+n);
+		display_pixel(r, c, pixel_color);
+	}
+} */
 // ------------------------------------------------------------------ clamp
 
 RGBColor
@@ -102,6 +208,14 @@ World::clamp_to_color(const RGBColor& raw_color) const {
 	}
 		
 	return (c);
+}
+
+
+//--------------------------------------rand_float
+
+inline const float
+World::rand_float() const{
+	return static_cast<float> (rand()) / static_cast<float> (RAND_MAX);
 }
 
 

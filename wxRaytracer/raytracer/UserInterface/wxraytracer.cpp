@@ -48,6 +48,7 @@ BEGIN_EVENT_TABLE( wxraytracerFrame, wxFrame )
    EVT_MENU(Menu_Render_Start3_2, wxraytracerFrame::OnRenderStart4)
    EVT_MENU(Menu_Render_Start3_2b, wxraytracerFrame::OnRenderStart5)
    EVT_MENU(Menu_Render_Start3_3, wxraytracerFrame::OnRenderStart6)
+   EVT_MENU(Menu_Render_Start4_a, wxraytracerFrame::OnRenderStart7)
    EVT_MENU( Menu_Render_Pause, wxraytracerFrame::OnRenderPause )
    EVT_MENU( Menu_Render_Resume, wxraytracerFrame::OnRenderResume )
    EVT_MENU( Menu_File_Save, wxraytracerFrame::OnSaveFile )
@@ -71,16 +72,23 @@ wxraytracerFrame::wxraytracerFrame(const wxPoint& pos, const wxSize& size)
    
    wxMenu *menuRender = new wxMenu;
    
-   menuRender->Append(Menu_Render_Start3_1_a , wxT("&Start" ));
-   menuRender->Append(Menu_Render_Start3_1_b, wxT("&Start"));
-   menuRender->Append(Menu_Render_Start3_1_c, wxT("&Start"));
-   menuRender->Append(Menu_Render_Start3_2, wxT("&Start"));
-   menuRender->Append(Menu_Render_Start3_2b, wxT("&Start"));
-   menuRender->Append(Menu_Render_Start3_3, wxT("&Start"));
+   menuRender->Append(Menu_Render_Start3_1_a , wxT("&3.1" ));
+   menuRender->Append(Menu_Render_Start3_1_b, wxT("&3.1b"));
+   menuRender->Append(Menu_Render_Start3_1_c, wxT("&3.1c"));
+   menuRender->Append(Menu_Render_Start3_2, wxT("&3.2"));
+   menuRender->Append(Menu_Render_Start3_2b, wxT("&3.2b"));
+   menuRender->Append(Menu_Render_Start3_3, wxT("&3.3"));
+   menuRender->Append(Menu_Render_Start4_a, wxT("&4.a"));
    menuRender->Append(Menu_Render_Pause , wxT("&Pause" ));
    menuRender->Append(Menu_Render_Resume, wxT("&Resume"));
    
-   menuRender->Enable(menuRender->FindItem(wxT("&Start" )), TRUE );
+   menuRender->Enable(menuRender->FindItem(wxT("&3.1" )), TRUE );
+   menuRender->Enable(menuRender->FindItem(wxT("&3.1b")), TRUE);
+   menuRender->Enable(menuRender->FindItem(wxT("&3.1c")), TRUE);
+   menuRender->Enable(menuRender->FindItem(wxT("&3.2")), TRUE);
+   menuRender->Enable(menuRender->FindItem(wxT("&3.2b")), TRUE);
+   menuRender->Enable(menuRender->FindItem(wxT("&3.3")), TRUE);
+   menuRender->Enable(menuRender->FindItem(wxT("&4.a")), TRUE);
    menuRender->Enable(menuRender->FindItem(wxT("&Pause" )), FALSE);
    menuRender->Enable(menuRender->FindItem(wxT("&Resume")), FALSE);
    
@@ -248,6 +256,20 @@ void wxraytracerFrame::OnRenderStart6(wxCommandEvent& WXUNUSED(event))
 	menu->Enable(menu->FindItem(wxT("&Resume")), FALSE);
 
 	canvas->renderStart(&World::build6);
+
+	wxMenu* menuFile = GetMenuBar()->GetMenu(0);
+	menuFile->Enable(menuFile->FindItem(wxT("&Open...")), FALSE);
+	menuFile->Enable(menuFile->FindItem(wxT("&Save As...")), TRUE);
+}
+
+void wxraytracerFrame::OnRenderStart7(wxCommandEvent& WXUNUSED(event))
+{
+	wxMenu* menu = GetMenuBar()->GetMenu(1);
+	menu->Enable(menu->FindItem(wxT("&Start")), FALSE);
+	menu->Enable(menu->FindItem(wxT("&Pause")), TRUE);
+	menu->Enable(menu->FindItem(wxT("&Resume")), FALSE);
+
+	canvas->renderStart(&World::build7);
 
 	wxMenu* menuFile = GetMenuBar()->GetMenu(0);
 	menuFile->Enable(menuFile->FindItem(wxT("&Open...")), FALSE);

@@ -65,6 +65,8 @@ class World {
 
 		void
 		build6(void);
+		void
+			build7(void);
 
 		void 												
 		render_scene(void) const;
@@ -82,7 +84,9 @@ class World {
 		hit_bare_bones_objects(const Ray& ray);
 						
 	private:
-		
+		inline const float
+			rand_float() const;
+
 		void 
 		delete_objects(void);
 
